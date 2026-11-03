@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Rapport de ventes du lundi, CFAO Mobility Côte d'Ivoire (démonstration)</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="fictif">Données fictives de démonstration. Aucun chiffre de CFAO Mobility n'a été utilisé.</div>
+<header class="top">
+  <div class="wrap top-in">
+    <img src="assets/logo-cfao.png" alt="CFAO Mobility" class="logo">
+    <div class="titre">
+      <h1>Rapport de ventes du lundi</h1>
+      <p id="sous-titre">Toutes marques, BYD à part</p>
+    </div>
+    <div class="pret"><span class="pastille-ok"></span><span id="pret">Prêt lundi 2 novembre à 8 h</span></div>
+  </div>
+</header>
+
+<nav class="filtres wrap" aria-label="Filtres">
+  <div class="filtre">
+    <span class="lib">Semaine</span>
+    <div class="chips" id="f-semaine"></div>
+  </div>
+  <div class="filtre">
+    <span class="lib">Site</span>
+    <div class="chips" id="f-site"></div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="kpis" id="kpis"></section>
+
+  <section class="bloc alertes-bloc">
+    <div class="bloc-tete">
+      <h2>Les trois alertes du lundi</h2>
+      <span class="note" id="alertes-note">Écrites par l'Expert, lundi 2 novembre à 8 h</span>
+    </div>
+    <ol class="alertes" id="alertes"></ol>
+  </section>
+
+  <div class="grille-2">
+    <section class="bloc">
+      <div class="bloc-tete"><h2>Par marque</h2><span class="note">Livraisons de la semaine contre objectif</span></div>
+      <div id="marques"></div>
+    </section>
+    <section class="bloc">
+      <div class="bloc-tete"><h2>Par site</h2><span class="note">Livraisons sur 4 semaines contre objectif</span></div>
+      <div class="sites-zone">
+        <svg id="carte" role="img" aria-label="Carte des sites"></svg>
+        <div id="sites"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="bloc byd">
+    <div class="bloc-tete">
+      <h2><span class="byd-mark">BYD</span> à part</h2>
+      <span class="note">Essais, transformation, délais et mix de motorisation</span>
+    </div>
+    <div class="byd-kpis" id="byd-kpis"></div>
+    <div class="grille-2 interne">
+      <div class="carte-blanche">
+        <h3>De l'essai à la commande, 8 semaines</h3>
+        <div class="chart-h"><canvas id="c-essais"></canvas></div>
+      </div>
+      <div class="carte-blanche">
+        <h3>Délai de livraison par modèle</h3>
+        <div id="modeles"></div>
+      </div>
+    </div>
+    <div class="grille-2 interne">
+      <div class="carte-blanche">
+        <h3>Électrique ou hybride</h3>
+        <div class="mix" id="mix"></div>
+      </div>
+      <div class="carte-blanche">
+        <h3>Essais de la semaine par site</h3>
+        <div id="byd-sites"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc">
+    <div class="bloc-tete"><h2>Les 8 dernières semaines</h2><span class="note">Commandes, livraisons et carnet</span></div>
+    <div class="chart-h grand"><canvas id="c-histo"></canvas></div>
+  </section>
+
+  <section class="bloc avant-apres">
+    <div class="bloc-tete"><h2>Le lundi matin, avant et avec l'Expert</h2><span class="note">Estimation</span></div>
+    <div class="aa">
+      <div class="aa-col avant">
+        <span class="aa-lib">Aujourd'hui</span>
+        <span class="aa-chiffre">une demi-journée</span>
+        <ul>
+          <li>Chaque site envoie son fichier, à des heures différentes</li>
+          <li>Le chef des ventes consolide, vérifie et met en forme</li>
+          <li>Les écarts se découvrent en réunion</li>
+        </ul>
+      </div>
+      <div class="aa-fleche" aria-hidden="true">→</div>
+      <div class="aa-col apres">
+        <span class="aa-lib">Avec l'Expert</span>
+        <span class="aa-chiffre">10 minutes de lecture</span>
+        <ul>
+          <li>Rapport prêt à 8 h, sur le téléphone</li>
+          <li>Trois alertes écrites, avec l'action à mener</li>
+          <li>La réunion commence par les décisions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc sources">
+    <div class="bloc-tete"><h2>D'où viennent les chiffres</h2></div>
+    <p>Un tableur source, à vraies formules : saisie de la semaine par site et par marque, commandes BYD une par une, essais BYD, objectifs. Changer la semaine ou le site recalcule tout. Le PDF de deux pages se tire du même tableur.</p>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap pied-in">
+    <span><strong>Données fictives de démonstration.</strong></span>
+    <span>Proposé par Yelema, maquette non publiée.</span>
+  </div>
+</footer>
+<script src="assets/chart.umd.min.js"></script>
+<script src="data/donnees.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
